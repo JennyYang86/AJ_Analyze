@@ -1,0 +1,56 @@
+sqlscripts.txt
+.headers on
+.mode cSV
+export gold fact_caipan
+.once gold_fact_caipan.cSV
+select * from gold fact_caipan.
+
+# export gold _fact_profit
+.once gold_fact_profit.csv
+select * from gold_fact_profit.
+
+#export gold_fact_crime
+.Once gold_fact_crime.csV
+select * from gold fact_crime.
+
+#分类统计进行统计
+select gold_fact_crime.Crime_ID, Crime_Category, Crime_Desc, Count(distinct gold_fact_crime.AJ_ID) from gold_fact_crime
+inner join gold_dim_crime on gold_fact_crime .Crime_ID=gold_dim_crime.Crime_ID
+inner join gold_fact_caipan on gold_fact_caipan.AJ_ID=gold_fact_crime.AJ_ID
+where gold_fact_caipan.Category_ID=1
+group by gold_fact_crime.Crime_ID
+
+#分类统计进行统计,需要在gold fact profit中
+select gold_fact_crime.Crime_ID, Crime_Category, Crime_Desc, Count(distinct gold_fact_crime.AJ_ID) from gold_fact_crime
+inner join gold_dim_crime on gold_fact_crime.Crime_ID=gold_dim_crime.Crime_ID
+inner join gold_fact_caipan on gold_fact_caipan.AJ_ID=gold_fact_crime.AJ_ID
+where exists ( select 1 from gold_fact_profit where gold_fact_profit.AJ_ID=gold_fact_caipan.AJ_ID)
+and gold_fact_caipan.Category_ID=1
+group by gold_fact_crime.Crime_ID
+
+driver={SQLite3 ODBC Driver};database=D:\JennyYang\testfiles\caipan.db;longnames=0;timeout=1000;notxn=0;
+select gold_fact_caipan.AJ_ID,gold_dim_category.Category_Desc, AJ_PJ_PJRX, AJ_ZH_Desc
+ from gold_fact_caipan inner join gold_dim_category on gold_fact_caipan.Category_ID=gold_dim_category.Category_ID
+where not exists (select 1 from gold_fact_crime where gold_fact_crime.AJ_ID=gold_fact_caipan.AJ_ID)
+and not exists (select 1 from silver_AJ_crime where silver_AJ_crime.AJ_ID=gold_fact_caipan.AJ_ID)
+--and gold_fact_caipan.Category_ID=
+
+
+select gold_fact_caipan.AJ_ID,gold_dim_category.Category_Desc,gold_dim_crime.Crime_Desc, AJ_ZH_Desc, AJ_PJ_PJRX,AJ_PJ_BYRW
+ from gold_fact_crime
+ inner join gold_fact_caipan on gold_fact_caipan.AJ_ID=gold_fact_crime.AJ_ID
+  inner join gold_dim_category on gold_fact_caipan.Category_ID=gold_dim_category.Category_ID
+  inner join gold_dim_crime on gold_dim_crime.Crime_ID=gold_fact_crime.Crime_ID
+where not exists (select 1 from gold_fact_profit where gold_fact_profit.AJ_ID=gold_fact_caipan.AJ_ID)
+and gold_fact_caipan.Category_ID=1
+and gold_dim_crime.Crime_Desc="贪污罪"
+
+
+SELECT silver_profit_sentences.AJ,silver_profit_sentences.Profit_Sentence,Profit_Desc,silver_profit_sentences.Profit_Sentence_1,silver_profit_sentences.Profit_Sentence_2
+
+  FROM silver_profit_sentences where not exists(select * from gold_fact_profit where gold_fact_profit.AJ_ID=silver_profit_sentences.AJ)
+  ;
+
+select count(distinct AJ) from silver_profit_sentences;
+
+select count(distinct AJ_ID) from gold_fact_profit

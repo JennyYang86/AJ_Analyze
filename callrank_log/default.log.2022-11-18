@@ -1,0 +1,6 @@
+2022-11-18 07:25:32,538 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-11-18 07:25:32,540 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-11-18 07:25:32,540 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-11-18 07:25:32,541 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-11-18 07:26:03,353 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(130): INFO silver_profit_sentences:data is inserted in clickOtherButton.
+2022-11-18 07:28:14,446 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.

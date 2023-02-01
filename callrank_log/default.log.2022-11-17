@@ -1,0 +1,14 @@
+2022-11-17 08:02:58,883 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-11-17 08:02:58,885 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-11-17 08:02:58,885 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-11-17 08:02:58,886 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-11-17 08:05:52,378 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-11-17 08:05:52,378 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-11-17 08:05:52,378 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-11-17 08:05:52,379 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-11-17 08:06:14,119 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(130): INFO silver_profit_sentences:data is inserted in clickOtherButton.
+2022-11-17 08:11:52,353 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-11-17 08:11:52,353 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-11-17 08:11:52,354 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-11-17 08:11:52,354 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-11-17 08:13:52,879 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.

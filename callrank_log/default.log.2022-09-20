@@ -1,0 +1,42 @@
+2022-09-20 20:15:57,072 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:15:57,073 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:15:57,074 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:15:57,074 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:16:00,405 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(45): INFO gold_dim_crimeis created.
+2022-09-20 20:16:00,423 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(48): INFO gold_dim_crime: data is inserted.
+2022-09-20 20:16:00,444 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(52): INFO gold_dim_category is reated.
+2022-09-20 20:16:00,465 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(55): INFO gold_dim_category: data is inserted.
+2022-09-20 20:16:00,503 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(59): INFO bronze_data_stage_1 is created.
+2022-09-20 20:16:00,520 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(63): INFO silver_fact_caipanis created.
+2022-09-20 20:16:00,542 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(66): INFO gold_fact_profit is created.
+2022-09-20 20:16:00,557 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(69): INFO gold_fact_crimeis created.
+2022-09-20 20:16:00,577 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(72): INFO gold_fact_caipanis created.
+2022-09-20 20:18:02,265 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(83): INFO bronze_data_stage_1: data is inserted.
+2022-09-20 20:24:38,917 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(103): INFO silver_fact_caipan:data is inserted in load_silver_data.
+2022-09-20 20:25:30,267 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(117): INFO gold_fact_caipan:data is inserted in clickStage1Button.
+2022-09-20 20:31:12,594 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:31:12,595 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:31:12,595 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:31:12,595 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:33:43,413 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(136): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
+2022-09-20 20:36:02,322 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:36:02,323 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:36:02,323 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:36:02,324 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:36:08,748 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(154): INFO gold_fact_crime: data is inserted in clickextractCrimeButton.
+2022-09-20 20:37:08,567 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(161): INFO silver_AJ_crime is created in clickotherButton.
+2022-09-20 20:37:43,478 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:37:43,479 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:37:43,479 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:37:43,479 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:37:47,091 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(161): INFO silver_AJ_crime is created in clickotherButton.
+2022-09-20 20:38:08,988 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:38:08,988 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:38:08,988 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:38:08,988 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:38:11,340 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(161): INFO silver_AJ_crime is created in clickotherButton.
+2022-09-20 20:50:40,165 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2022-09-20 20:50:40,165 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2022-09-20 20:50:40,165 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2022-09-20 20:50:40,166 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2022-09-20 20:50:43,917 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(169): INFO silver_AJ_crime: data is inserted in clickextractCrimeDimensionButton.
