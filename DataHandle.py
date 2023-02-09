@@ -42,8 +42,8 @@ class DataHandle:
             text = str(df_query.loc[i, 'AJ_Desc'])
             if (len(text)) > 6:
                 df_query.loc[i, 'AJ_Desc'] = jio.clean_text(text)
-            else:
-                df_query.loc[i,'AJ_Desc']='数据清洗错误'
+            # else:
+            #     df_query.loc[i,'AJ_Desc']='数据清洗错误'
         # print(df_query.head(5))
         df_query = df_query.drop_duplicates(['AJ_ID'])
         return df_query
@@ -75,7 +75,8 @@ class DataHandle:
                         if k + 1< len(b):
                             mydict[key] = text[b[k]:b[k + 1]]
                         else:
-                            mydict[key] = text[b[k]:a[0]]
+                            if b[k] < a[0]:
+                                mydict[key] = text[b[k]:a[0]]
                     df_query.loc[i, 'AJ_PJ_BYRW'] = str(json.dumps(mydict, ensure_ascii=False))
             else:
                 df_query.loc[i, 'AJ_PJ_PJRX'] = '找不到判决如下的描述'
@@ -94,43 +95,53 @@ class DataHandle:
         Profit_Desc = []
         Profit_Num = []
         strDataRule = []
+        Source_ID = []
         for key, value in config.data_rules["profit_section"]["front"].items():
             strDataRule.append(value)
         strDataRule = '|'.join(strDataRule)
 
-        strDataRule2 = []
-        for key, value in config.data_rules["profit_section"]["back"].items():
-            strDataRule2.append(value)
-        strDataRule2 = '|'.join(strDataRule2)
+        # strDataRule2 = []
+        # for key, value in config.data_rules["profit_section"]["back"].items():
+        #     strDataRule2.append(value)
+        # strDataRule2 = '|'.join(strDataRule2)
         for i in range(len(df_query)):
             strProfit = str(df_query.loc[i, 'AJ_PJ_PJRX'])
             results = jio.ner.extract_money(strProfit, with_parsing=True)
             intAJLen = len(AJ_ID)
             for item in results:
                 intstrPos = item['offset'][0]
-                intPos3 = 8
-                intPos1 = strProfit.rfind('，', 0, intstrPos)
-                intPos2 = strProfit.rfind('。', 0, intstrPos)
-                if (intPos1>intPos2):
-                    intPos3 = intPos1
-                else:
-                    intPos3 = intPos2
+                # intPos3 = 0
+                # intPos1 = strProfit.rfind('，', 0, intstrPos)
+                # intPos2 = strProfit.rfind('。', 0, intstrPos)
+                # if (intPos1>intPos2):
+                #     intPos3 = intPos1
+                # else:
+                #     intPos3 = intPos2
+                compList=[]
+                compList.append(strProfit.rfind('，', 0, intstrPos))
+                compList.append(strProfit.rfind('。', 0, intstrPos))
+                compList.append(strProfit.rfind('、', 0, intstrPos))
+                compList.append(strProfit.rfind('：', 0, intstrPos))
+
+                intPos3=max(compList)
                 strSentence = strProfit[intPos3:item['offset'][1]]
                 # strPattern=r'(.*?)(赃款丨行贿丨违法所得)%s(.*?)'%(item[ 'text'])
                 strPattern = rf"%s[\u4E00-\u9FA5]*%s" %(strDataRule, str(item['text']))
                 # matchObj = re.finditer(strPattern,strSentence)
-                for matchobj in re.finditer(strPattern, strSentence):
-                    if (matchobj):
-                        AJ_ID.append(df_query.loc[i, 'AJ_ID'])
-                        Profit_Desc.append(str(item['text']))
-                        strNum = item['detail']['num']
-                        if (is_number(str(strNum))):
-                            Profit_Num.append(strNum)
-                        else:
-                            # print(df query. loc[i,‘A)_ID'])
-                            # print(strNum)
-                            # print(strlNum[0])
-                            Profit_Num.append(strNum[0])
+
+                matchobj = re.search(strPattern, strSentence)
+                if (matchobj):
+                    AJ_ID.append(df_query.loc[i, 'AJ_ID'])
+                    Profit_Desc.append(str(item['text']))
+                    strNum = item['detail']['num']
+                    Source_ID.append(0)
+                    if (is_number(str(strNum))):
+                        Profit_Num.append(strNum)
+                    else:
+                        # print(df query. loc[i,‘A)_ID'])
+                        # print(strNum)
+                        # print(strlNum[0])
+                        Profit_Num.append(strNum[0])
                     # else:
                     #     intstrPos2 = item['offset'][1]
                     #     intPos32 = 0
@@ -153,34 +164,42 @@ class DataHandle:
                     #                 Profit_Num.append(strNum)
                     #             else:
                     #                 Profit_Num.append(strNum[0])
-            # if(intAJLen == len(AJ_ID)):
-            #     strProfit = str(df_query.loc[i, 'AJ_PJ_BYRW'])
-            #     results = jio.ner.extract_money(strProfit, with_parsing=True)
-            #     for item in results:
-            #         intstrPos = item['offset'][0]
-            #         intPos3 = 8
-            #         intPos1 = strProfit.rfind('，', 0, intstrPos)
-            #         intPos2 = strProfit.rfind('。', 0, intstrPos)
-            #         if (intPos1 > intPos2):
-            #             intPos3 = intPos1
-            #         else:
-            #             intPos3 = intPos2
-            #         strSentence = strProfit[intPos3:item['offset'][1]]
-            #         # strPattern=r'(.*?)(赃款丨行贿丨违法所得)%s(.*?)'%(item[ 'text'])
-            #         strPattern = rf"%s[\u4E00-\u9FA5]*%s" % (strDataRule, str(item['text']))
-            #         matchObj = re.finditer(strPattern, strSentence)
-            #         if (matchObj):
-            #             AJ_ID.append(df_query.loc[i, 'AJ_ID'])
-            #             Profit_Desc.append(str(item['text']))
-            #             strNum = item['detail']['num']
-            #             if (is_number(str(strNum))):
-            #                 Profit_Num.append(strNum)
-            #             else:
-            #                 # print(df query. loc[i,‘A)_ID'])
-            #                 # print(strNum)
-            #                 # print(strlNum[0])
-            #                 Profit_Num.append(strNum[0])
-        list = {"AJ_ID": AJ_ID, "Profit_Desc": Profit_Desc,"Profit_Num":Profit_Num}
+            if(intAJLen == len(AJ_ID)):
+                strProfit = str(df_query.loc[i, 'AJ_PJ_BYRW'])
+                results = jio.ner.extract_money(strProfit, with_parsing=True)
+                for item in results:
+                    intstrPos = item['offset'][0]
+                    # intPos3 = 0
+                    # intPos1 = strProfit.rfind('，', 0, intstrPos)
+                    # intPos2 = strProfit.rfind('。', 0, intstrPos)
+                    # if (intPos1 > intPos2):
+                    #     intPos3 = intPos1
+                    # else:
+                    #     intPos3 = intPos2
+                    compList = []
+                    compList.append(strProfit.rfind('，', 0, intstrPos))
+                    compList.append(strProfit.rfind('。', 0, intstrPos))
+                    compList.append(strProfit.rfind('、', 0, intstrPos))
+                    compList.append(strProfit.rfind('：', 0, intstrPos))
+
+                    intPos3 = max(compList)
+                    strSentence = strProfit[intPos3:item['offset'][1]]
+                    # strPattern=r'(.*?)(赃款丨行贿丨违法所得)%s(.*?)'%(item[ 'text'])
+                    strPattern = rf"%s[\u4E00-\u9FA5]*%s" % (strDataRule, str(item['text']))
+                    matchobj = re.search(strPattern, strSentence)
+                    if (matchobj):
+                        AJ_ID.append(df_query.loc[i, 'AJ_ID'])
+                        Profit_Desc.append(str(item['text']))
+                        strNum = item['detail']['num']
+                        Source_ID.append(1)
+                        if (is_number(str(strNum))):
+                            Profit_Num.append(strNum)
+                        else:
+                            # print(df query. loc[i,‘A)_ID'])
+                            # print(strNum)
+                            # print(strlNum[0])
+                            Profit_Num.append(strNum[0])
+        list = {"AJ_ID": AJ_ID, "Profit_Desc": Profit_Desc,"Profit_Num":Profit_Num, "Source_ID":Source_ID}
         df_result = pd.DataFrame(list)
 
         return df_result
@@ -218,7 +237,7 @@ class DataHandle:
             else:
                 AJ_ID.append(df_query.loc[i, 'AJ_ID'])
                 Crime_Desc.append("找不到罪名描述")
-        list = {"AJ _ID": AJ_ID, "Crime_Desc": Crime_Desc}
+        list = {"AJ_ID": AJ_ID, "Crime_Desc": Crime_Desc}
         df_result = pd.DataFrame(list)
         return df_result
 

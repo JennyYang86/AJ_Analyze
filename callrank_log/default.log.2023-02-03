@@ -1,0 +1,18 @@
+2023-02-03 01:00:03,371 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2023-02-03 01:00:03,373 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2023-02-03 01:00:03,373 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2023-02-03 01:00:03,373 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2023-02-03 01:00:08,123 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(45): INFO gold_dim_crimeis created.
+2023-02-03 01:00:08,137 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(48): INFO gold_dim_crime: data is inserted.
+2023-02-03 01:00:08,157 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(52): INFO gold_dim_category is reated.
+2023-02-03 01:00:08,174 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(55): INFO gold_dim_category: data is inserted.
+2023-02-03 01:00:08,190 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(59): INFO bronze_data_stage_1 is created.
+2023-02-03 01:00:08,210 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(63): INFO silver_fact_caipanis created.
+2023-02-03 01:00:08,227 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(66): INFO gold_fact_profit is created.
+2023-02-03 01:00:08,246 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(69): INFO gold_fact_crimeis created.
+2023-02-03 01:00:08,262 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(72): INFO gold_fact_caipanis created.
+2023-02-03 01:02:09,668 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(83): INFO bronze_data_stage_1: data is inserted.
+2023-02-03 01:09:00,046 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(103): INFO silver_fact_caipan:data is inserted in load_silver_data.
+2023-02-03 01:10:07,894 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(117): INFO gold_fact_caipan:data is inserted in clickStage1Button.
+2023-02-03 01:13:10,022 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
+2023-02-03 01:14:18,388 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(162): INFO gold_fact_crime: data is inserted in clickextractCrimeButton.

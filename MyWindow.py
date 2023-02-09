@@ -4,6 +4,7 @@ from GlobalLoger import ta_log
 import config
 import pandas as pd
 from DataHandle import *
+import tkinter.ttk as ttk
 
 
 class MyWindow(Frame ):
@@ -34,6 +35,17 @@ class MyWindow(Frame ):
         extractProfitButoon.place(x=100, y=0)
         extractCrimeButoon.place(x=100, y=30)
         extractCrimeDimensionButoon.place(x=100, y=60)
+
+        # tab_main = ttk.Notebook()
+        # tab_main.place(relx=0.02, rely=0.02, relwidth=0.887, relheight=0.876)
+        #
+        # tab1 = Frame(tab_main)
+        # tab1.place(x=0, y=30)
+        # tab_main.add(tab1, text="first")
+        #
+        # tab2 = Frame(tab_main)
+        # tab2.place(x=100, y=30)
+        # tab_main.add(tab2, text="second")
 
     def clickExitButton(self):
         exit()
@@ -75,8 +87,8 @@ class MyWindow(Frame ):
         db = DbOpt()
         filename = config.datasource_setting["file_to_bronze"]
         data = pd.read_excel(filename, sheet_name=0, header=None, skiprows=1, engine="openpyxl")
-        df = data[ [5,8,9,10, 24,25,42]]
-        df.columns = ["AJ_ID","Category","Unit_1","Unit_2","Open_Date","Log_Date","AJ_Desc"]
+        df = data[ [5,8,9,10, 24,25,42,6,7,30,31,32]]
+        df.columns = ["AJ_ID","Category","Unit_1","Unit_2","Open_Date","Log_Date","AJ_Desc","AJ_Title","AJ_ZM","RDGC","FZSD","MQLY"]
         df = df.apply(lambda x: tuple(x), axis=1).values.tolist()
         table_name = "bronze_data_stage_1"
         db.insert_table_data(table_name, df)
@@ -105,10 +117,10 @@ class MyWindow(Frame ):
 
     def clickStage1Button(self):
         db = DbOpt()
-        sql = "Select AJ_ID, Category_ID, AJ_ZH_Desc from silver_fact_caipan inner join gold_dim_category on silver_fact_caipan.Category = gold_dim_category.Category_Desc"
-        df = pd.DataFrame(db.select_table_data(sql), columns=["AJ_ID","Category_ID","AJ_ZH_Desc"])
-        df["AJ_PJ_PJRX"] = ""
-        df["AJ_PJ_BYRW"] = ""
+        sql = "Select AJ_ID, Category_ID, AJ_ZH_Desc,\"\",\"\", AJ_Title,AJ_ZM,RDGC,FZSD,MQLY from silver_fact_caipan inner join gold_dim_category on silver_fact_caipan.Category = gold_dim_category.Category_Desc where gold_dim_category.Category_ID=1"
+        df = pd.DataFrame(db.select_table_data(sql), columns=["AJ_ID","Category_ID","AJ_ZH_Desc","AJ_PJ_PJRX","AJ_PJ_BYRW","AJ_Title","AJ_ZM","RDGC","FZSD","MQLY"])
+        # df["AJ_PJ_PJRX"] = ""
+        # df["AJ_PJ_BYRW"] = ""
         handle = DataHandle()
         df = handle.clean_silver_data(df)
 

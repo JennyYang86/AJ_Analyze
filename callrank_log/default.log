@@ -1,20 +1,30 @@
-2022-11-25 20:37:21,772 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
-2022-11-25 20:37:21,774 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
-2022-11-25 20:37:21,774 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
-2022-11-25 20:37:21,775 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
-2022-11-25 20:39:32,252 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
-2022-11-25 20:45:42,026 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
-2022-11-25 20:45:42,027 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
-2022-11-25 20:45:42,027 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
-2022-11-25 20:45:42,027 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
-2022-11-25 20:48:22,030 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
-2022-11-25 20:53:14,354 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
-2022-11-25 20:53:14,354 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
-2022-11-25 20:53:14,355 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
-2022-11-25 20:53:14,355 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
-2022-11-25 20:53:19,749 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(177): INFO silver_AJ_crime: data is inserted in clickextractCrimeDimensionButton.
-2022-11-25 20:53:44,585 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
-2022-11-25 20:53:44,586 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
-2022-11-25 20:53:44,586 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
-2022-11-25 20:53:44,586 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
-2022-11-25 20:55:53,555 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(144): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
+2023-02-09 02:03:55,961 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2023-02-09 02:03:55,962 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2023-02-09 02:03:55,963 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2023-02-09 02:03:55,963 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2023-02-09 02:03:59,425 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(57): INFO gold_dim_crimeis created.
+2023-02-09 02:03:59,440 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(60): INFO gold_dim_crime: data is inserted.
+2023-02-09 02:03:59,461 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(64): INFO gold_dim_category is reated.
+2023-02-09 02:03:59,477 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(67): INFO gold_dim_category: data is inserted.
+2023-02-09 02:03:59,493 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(71): INFO bronze_data_stage_1 is created.
+2023-02-09 02:03:59,513 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(75): INFO silver_fact_caipanis created.
+2023-02-09 02:03:59,527 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(78): INFO gold_fact_profit is created.
+2023-02-09 02:03:59,546 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(81): INFO gold_fact_crimeis created.
+2023-02-09 02:03:59,564 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(84): INFO gold_fact_caipanis created.
+2023-02-09 02:06:14,494 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(95): INFO bronze_data_stage_1: data is inserted.
+2023-02-09 02:17:54,981 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(115): INFO silver_fact_caipan:data is inserted in load_silver_data.
+2023-02-09 02:22:34,994 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(129): INFO gold_fact_caipan:data is inserted in clickStage1Button.
+2023-02-09 02:24:38,559 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2023-02-09 02:24:38,560 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2023-02-09 02:24:38,560 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2023-02-09 02:24:38,560 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2023-02-09 02:27:25,888 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(156): INFO gold_fact_profit:data is inserted in clickextractProfitButton.
+2023-02-09 08:28:34,680 C:\Users\Administrator\PycharmProjects\pythonProject\MyWindow.py(174): INFO gold_fact_crime: data is inserted in clickextractCrimeButton.
+2023-02-09 08:38:16,283 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2023-02-09 08:38:16,283 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2023-02-09 08:38:16,283 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2023-02-09 08:38:16,284 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------
+2023-02-09 08:50:57,079 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(93): INFO -------------------- logging start --------------------
+2023-02-09 08:50:57,079 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(94): INFO LEVEL: INFO
+2023-02-09 08:50:57,080 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(96): INFO PATH:  C:\Users\Administrator\.jionlp_logs
+2023-02-09 08:50:57,080 C:\ProgramData\Anaconda3\envs\pu3.8\lib\site-packages\jionlp\util\logger.py(97): INFO -------------------------------------------------------

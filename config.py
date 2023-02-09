@@ -1,13 +1,14 @@
 DEBUG = True
 db_connect = {
-    "db_file_path": "D:\\JennyYang\\testfiles\\caipan.db",
+    "db_file_path": "D:\\JennyYang\\testfiles\\caipan_202302.db",
     "bronze_table_1": "bronze data stage_1",
     "silver_table 1": "silver_fact_caipan",
     "fact_caipan": "gold_fact_caipan",
     "dim_program": "gold_dim_category",
     "fact_profit": "gold_fact_profit",
     "fact_crime": "gold_fact_crime",
-    "dim_crime": "gold_dim_crime"
+    "dim_crime": "gold_dim_crime",
+    "silver_dim_crime": "silver_AJ_crime"
 }
 
 datasource_setting={
@@ -42,7 +43,9 @@ data_rules = {
             "rule20": "收缴",
             "rule21": "扣押",
             "rule22": "涉案",
-            "rule22": "退"
+            "rule23": "给予",
+            "rule24": "国家工作人员",
+            "rule25": "退"
         },
         "back": {
 
@@ -58,7 +61,12 @@ table_definition = {
         "Unit_2": "TEXT",
         "Open_Date": "TEXT",
         "Log_Date": "TEXT",
-        "AJ_Desc": "TEXT"
+        "AJ_Desc": "TEXT",
+        "AJ_Title": "TEXT",
+        "AJ_ZM": "TEXT",
+        "RDGC":"TEXT",
+        "FZSD": "TEXT",
+        "MQLY": "TEXT"
     },
     "silver_fact_caipan": {
         "AJ_ID": "TEXT",  # 文书ID
@@ -67,7 +75,12 @@ table_definition = {
         "Unit_2": "TEXT",  # 公诉机关
         "Open_Date": "TEXT",  # 起诉时间
         "Log_Date": "TEXT",  # 发布时间
-        "AJ_ZH_Desc": "TEXT"  # 处理后的案件描述
+        "AJ_ZH_Desc": "TEXT",  # 处理后的案件描述
+        "AJ_Title": "TEXT",
+        "AJ_ZM": "TEXT",
+        "RDGC":"TEXT",
+        "FZSD": "TEXT",
+        "MQLY": "TEXT"
     },
     "silver_profit_sentences":{
         "AJ ID":"TEXT",
@@ -82,7 +95,12 @@ table_definition = {
         "Category_ID": "INTEGER",  # 审批程年ID
         "AJ_ZH_Desc": "TEXT",  # 处理后的案件
         "AJ_PJ_PJRX": "TEXT",  # 判决模块截取
-        "AJ_PJ_BYRW": "TEXT"  # 判决模块截取工
+        "AJ_PJ_BYRW": "TEXT",  # 判决模块截取工
+        "AJ_Title": "TEXT",
+        "AJ_ZM": "TEXT",
+        "RDGC":"TEXT",
+        "FZSD": "TEXT",
+        "MQLY": "TEXT"
     },
     "gold_dim_category": {
         "Category_ID": "INTEGER",
@@ -91,7 +109,8 @@ table_definition = {
     "gold_fact_profit": {
         "AJ_ID": "TEXT",
         "Profit_Desc": "TEXT",  # 利益金额在案件中的描述
-        "Profit_Num": "TEXT"  # 数字显示
+        "Profit_Num": "TEXT",  # 数字显示
+        "Source_ID": "INTEGER"
     },
     "gold_fact_crime":  {
         "AJ_ID": "TEXT",
@@ -104,7 +123,7 @@ table_definition = {
     },
     "silver_AJ_crime": {
         "AJ_ID": "TEXT",
-        "Crime Desc": "TEXT"
+        "Crime_Desc": "TEXT"
     }
 }
 
